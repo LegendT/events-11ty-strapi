@@ -1,0 +1,40 @@
+.site-head {
+	background-color: get-color('primary');
+	padding-top: get-size('400');
+	@include media-query('md') {
+		padding-top: 0;
+	}
+
+	&__inner {
+		@include media-query('md') {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	&__brand {
+		flex-shrink: 0;
+		margin-inline-end: get-size('600');
+		// Prevents nav bunching up to the logo
+
+		// Optical adjustment to account for the offset
+		transform: translateY(0.25rem);
+
+		svg {
+			width: 160px;
+		}
+	}
+
+	&__nav {
+		padding: get-size('300') 0;
+	}
+
+	@include media-query('lg') {
+		&__brand {
+			svg {
+				width: 200px;
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+<article class="split-panel">
+    <div class="split-panel__content">
+        <figure class="[ flow ]">
+            <div class="[ gallery__media ] [ frame ]">
+                <img
+                class="radius"
+                src="{{ image }}"
+                alt="{{ imageAlt }}"
+            />
+            </div>
+
+            <figcaption class="leading-loose flow-space-700">
+                {% if about %}
+                    {{ about | safe }}
+                {%endif%}
+            </figcaption>
+        </figure>
+    </div>
+    <div class="split-panel__content">
+        <div class="content">
+            <h2 class="gap-top-600">Talk detatils</h2>
+            <div class="leading-flat flow flow-space-700">
+                {% if talkDetails %}
+                    <p>{{ talkDetails | safe }}</p>
+                    {%endif%}
+            </div>
+        </div>
+    </div>
+</article>

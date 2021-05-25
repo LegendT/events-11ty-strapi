@@ -1,0 +1,29 @@
+{
+	"name": "events-11ty",
+	"version": "1.0.0",
+	"description": "",
+	"main": ".eleventy.js",
+	"scripts": {
+		"start": "npx gulp && concurrently \"npx gulp watch\" \"npx eleventy --serve\"",
+		"production": "NODE_ENV=production npx gulp && NODE_ENV=production npx eleventy"
+	},
+	"keywords": [],
+	"author": "Anthony George",
+	"license": "ISC",
+	"dependencies": {
+		"@11ty/eleventy": "^0.12.1",
+		"@11ty/eleventy-cache-assets": "^2.2.1",
+		"@11ty/eleventy-plugin-rss": "^1.1.1",
+		"@manustays/eleventy-plugin-generate-social-images": "^4.1.0",
+		"concurrently": "^6.1.0",
+		"eleventy-plugin-svg-contents": "^0.7.0",
+		"gorko": "^0.3.0",
+		"gulp": "^4.0.2",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-imagemin": "^7.1.0",
+		"gulp-sass": "^4.1.0",
+		"html-minifier": "^4.0.0",
+		"moment": "^2.29.1",
+		"sass": "^1.32.13"
+	}
+}

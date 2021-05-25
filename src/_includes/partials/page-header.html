@@ -1,0 +1,10 @@
+<div class="[ page-header ]">
+    <h1 class="[ page-header__heading ] [ headline ]">
+      {{ pageHeaderTitle }}
+    </h1>
+    {% if pageHeaderSummary %}
+    <h2 class="[ page-header__summary ] [ measure-long ]">
+      {{ pageHeaderSummary | safe }}
+    </h2>
+    {% endif %}
+</div>

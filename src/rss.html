@@ -1,0 +1,33 @@
+---
+title: 'Collaborate Conference'
+summary: 'A feed of the latest speakers at our conference.'
+permalink: '/feed.xml'
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ title }}</title>
+  <subtitle>{{ summary }}</subtitle>
+  <link href="{{ site.url }}{{ permalink }}" rel="self"/>
+  <link href="{{ site.url }}/"/>
+  <updated>{{ collections.blog | rssLastUpdatedDate }}</updated>
+  <id>{{ site.url }}</id>
+  <author>
+    <name>{{ site.authorName }}</name>
+    <email>{{ site.authorEmail }}</email>
+  </author>
+  {% for speaker in collections.speakers %}
+    {% set absolutePostUrl %}{{ site.url }}{{ speaker.url | url }}{% endset %}
+    <entry>
+      <title>{{ speaker.data.title }}</title>
+      <link href="{{ absolutePostUrl }}"/>
+
+      <id>{{ absolutePostUrl }}</id>
+      <content type="html">
+        <![CDATA[
+        {{ speaker.data.about | striptags(true) }}
+        {{ speaker.data.talkDetails | striptags(true) }}
+      ]]>
+      </content>
+    </entry>
+  {% endfor %}
+</feed>

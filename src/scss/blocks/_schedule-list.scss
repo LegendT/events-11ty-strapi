@@ -1,0 +1,47 @@
+ol.schedule-list {
+	border-left: 2px solid get-color('secondary-glare');
+	padding: get-size('400') 0 get-size('400') get-size('400');
+	@include apply-utility('gap-top', '700');
+	&:after {
+		content: '';
+		width: 40px;
+		height: 2px;
+		position: absolute;
+		bottom: 0;
+		left: 1px;
+		@include apply-utility('bg', 'secondary-glare');
+	}
+
+	.schedule-list__item {
+		position: relative;
+		margin: get-size('700') 0;
+
+		&[class*='bg-'] {
+			padding: get-size('400');
+		}
+
+		&:first-of-type {
+			margin-top: 0;
+		}
+		&::before {
+			--radius: 50%;
+			content: '';
+			width: 9px;
+			height: 9px;
+			@include apply-utility('bg', 'secondary-glare');
+			border-radius: var(--radius);
+			position: absolute;
+			top: -1.3rem;
+			left: -1.3rem;
+		}
+		h2 {
+			font-family: 'museoSans500';
+		}
+		.schedule-list__content-time {
+			position: absolute;
+			color: get-color('secondary-glare');
+			top: -1.7rem;
+			left: 0;
+		}
+	}
+}

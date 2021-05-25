@@ -1,0 +1,17 @@
+.back-link {
+	@include apply-utility('gap-top', '600');
+	.back-link__list {
+		@include apply-utility('gap-top', '600');
+		a {
+			color: get-color('dark');
+			text-decoration: none;
+			font-size: get-size('600');
+
+			&::before {
+				content: '<';
+				display: inline-block;
+				padding-right: get-size('300');
+			}
+		}
+	}
+}

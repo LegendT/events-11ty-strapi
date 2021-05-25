@@ -1,0 +1,44 @@
+@font-face {
+	font-family: 'DinProLight';
+	font-weight: 500;
+
+	src: url('/fonts/DINPro-Light.woff2') format('woff2'); /* Pretty Modern Browsers */
+	font-display: swap;
+}
+@font-face {
+	font-family: 'DinPro700';
+	font-weight: 700;
+	src: url('/fonts/DINPro-Medium.woff2') format('woff2'); /* Pretty Modern Browsers */
+	font-display: swap;
+}
+@font-face {
+	font-weight: 100;
+	font-family: 'MuseoSans100';
+	src: url('/fonts/museosans-100-webfont-webfont.woff2') format('woff2'); /* Pretty Modern Browsers */
+	font-display: swap;
+}
+@font-face {
+	font-weight: 300;
+	font-family: 'MuseoSans300';
+	src: url('/fonts/museosans-300-webfont-webfont.woff2') format('woff2'); /* Pretty Modern Browsers */
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'MuseoSans500';
+	font-weight: 500;
+	src: url('/fonts/museosans-500-webfont-webfont.woff2') format('woff2'); /* Pretty Modern Browsers */
+	font-display: swap;
+}
+@font-face {
+	font-family: 'MuseoSans700';
+	font-weight: 700;
+	src: url('/fonts/museosans-700-webfont-webfont.woff2') format('woff2'); /* Pretty Modern Browsers */
+	font-display: swap;
+}
+@font-face {
+	font-family: 'MuseoSans900';
+	font-weight: 900;
+	src: url('/fonts/museosans-900-webfont-webfont.woff2') format('woff2'); /* Pretty Modern Browsers */
+	font-display: swap;
+}

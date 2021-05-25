@@ -1,0 +1,19 @@
+{% extends "layouts/base.html" %}
+{% set pageHeaderTitle = title %}
+{% set pageCriticalStyles = ['css/page.css'] %}
+
+{% block content %}
+<div class="wrapper">
+<article class="flow">
+  {% include "partials/page-header.html" %}
+  <div class="[ page-panel ] [ flow-space-700 ]">
+    <div class="[ gallery__media ] [ frame ]">
+        <img class="clip-image" src="{{imageUrl}}" alt="{{imageAlt}}">
+      </div>
+    <div class="[ page-content ] [ flow wrapper ] [ flow-space-400 ]">
+      {{ content | safe }}
+    </div>
+  </div>
+</article>
+</div>
+{% endblock %}

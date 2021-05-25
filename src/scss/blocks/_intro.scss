@@ -1,0 +1,55 @@
+.intro {
+	background-image: url('images/bg/hero/hero@3x.jpg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: relative;
+	padding: 10% 0 56% 0;
+	@include media-query('sm') {
+		padding: 10% 0 43% 0;
+	}
+
+	@include media-query('md') {
+		padding: 10% 0 32% 0;
+	}
+
+	@include media-query('lg') {
+		padding: 3.8rem 0 4rem 0;
+		background-size: cover;
+	}
+
+	> * {
+		text-align: center;
+	}
+
+	&__heading {
+		background-image: url('images/logos/collaborate/collaborate-purple.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 21rem;
+		height: clamp(1rem, 5vw, 3rem);
+		max-width: 440px;
+		max-height: 62px;
+		margin: get-size('400') auto;
+	}
+
+	&__content {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		margin: 0 get-size('400');
+		@include media-query('lg') {
+			position: relative;
+		}
+		p {
+			max-width: 40ch;
+			margin: 0 auto;
+		}
+
+		.intro__summary {
+			color: get-color('primary');
+			letter-spacing: 2.67px;
+			width: fit-content;
+		}
+	}
+}

@@ -1,0 +1,32 @@
+{% set pageHeaderTitle = title %}
+{% set pageHeaderSummary = summary %}
+{% extends "layouts/base.html" %}
+
+{% block content %}
+	<section class="speaker-item">
+		<div class="wrapper flow">
+			{% if pageHeaderTitle %}
+				{% include "partials/page-header.html" %}
+			{% endif %}
+			{% include "partials/split-panel.html" %}
+			<div class="[ back-link ] [ low flow-space-700 ]">
+				<a
+				href="https://collaborate2021.eventbrite.co.uk"
+				class="button"
+				target="_blank"
+				>Buy tickets
+				<span class="visually-hidden">opens in a new window</span></a
+			>
+				<ul class="[ back-link__list ] [ flow flow-space-400 ]">
+					<li>
+						<a class="chevron-left large" href="/speakers/">View all speakers</a>
+					</li>
+					<li>
+						<a class="chevron-left large" href="/schedule">View full schedule</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}

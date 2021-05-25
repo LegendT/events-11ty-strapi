@@ -1,0 +1,23 @@
+// First up: config and functions
+@import 'config';
+
+// Set Gorko to output no CSS for this file
+$outputTokenCSS: false;
+
+// Next: pull in gorko for design tokens
+@import '../../node_modules/gorko/gorko.scss';
+
+// Pull in blocks
+@import 'blocks/intro';
+
+main {
+	margin-top: 0;
+	.clip-image {
+		display: none;
+	}
+	@include media-query('md') {
+		.clip-image {
+			display: inline-block;
+		}
+	}
+}

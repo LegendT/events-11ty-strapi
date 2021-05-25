@@ -1,0 +1,26 @@
+<a class="[ skip-link ] [ button ]" href="#main-content">Skip to content</a>
+<header role="banner" class="site-head">
+  <div class="wrapper">
+    <div class="site-head__inner">
+      <a href="/" aria-label="{{ site.name }} - home" class="site-head__brand">
+        {# {% include "partials/brand.svg" %} #}
+        {% include "../../images/logos/collaborate/collaborate.svg" %}
+      </a>
+      <nav
+        class="[ nav ] [ site-head__nav ] [ font-sans ]"
+        aria-label="Primary navigaton"
+      >
+        <button id="toggle" aria-expanded="false">Menu<span></span></button>
+        <ul class="nav__list" id="menu">
+          {% for item in navigation.items %}
+            <li>
+              <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
+              class="[ text-400 color-white ]">{{ item.text }}</a
+            >
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,28 @@
+{
+	"items": [
+		{
+			"text": "Why join us?",
+			"url": "/join-us/"
+		},
+		{
+			"text": "Speakers",
+			"url": "/speakers/"
+		},
+		{
+			"text": "Schedule",
+			"url": "/schedule/"
+		},
+		{
+			"text": "Venue",
+			"url": "/venue/"
+		},
+		{
+			"text": "Sponsors",
+			"url": "/sponsors/"
+		},
+		{
+			"text": "Buy tickets",
+			"url": "https://www.eventbrite.co.uk/e/collaborate-bristol-2021-tickets-83771112653"
+		}
+	]
+}

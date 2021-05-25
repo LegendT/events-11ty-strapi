@@ -1,0 +1,34 @@
+{% set pageHeaderTitle = name %}
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<section class="speaker-item">
+	<div class="wrapper flow">
+		{% if pageHeaderTitle %} {% include "partials/page-header.html" %} {%
+		endif %}
+	</div>
+	<div class="[ wrapper ] [ flow flow-space-700 ]">
+		{% if sponsor %}
+		<article>
+			<h2>{{sponsor}}</h2>
+			<img src="{{imageUrl}}" imageAlt="imageAlt" />
+			{{text | safe}}
+			<a href="{{link}}" target="_blank" class="gap-top-400"
+				>{{name}}
+				<span class="visually-hidden">opens in a new window</span></a
+			>
+		</article>
+		{% endif %} {% if partner %}
+		<article>
+			<h2>{{partner}}</h2>
+			<img src="{{imageUrl}}" imageAlt="imageAlt" />
+			{{text | safe}}
+			<a href="{{link}}" target="_blank" class="gap-top-400"
+				>{{partner}}
+				<span class="visually-hidden">opens in a new window</span></a
+			>
+		</article>
+		{% endif %}
+	</div>
+</section>
+{% endblock %}

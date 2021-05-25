@@ -1,0 +1,15 @@
+.page-header {
+	padding: 3rem 0 0;
+	.page-header__heading {
+		position: relative;
+		&::before {
+			background: #000;
+			content: '';
+			height: 5px;
+			left: 0;
+			position: absolute;
+			top: -2rem;
+			width: 40px;
+		}
+	}
+}

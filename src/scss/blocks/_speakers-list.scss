@@ -1,0 +1,30 @@
+.speakers-list {
+	.auto-grid {
+		--auto-grid-min-size: 100%;
+		@include media-query('md') {
+			--auto-grid-min-size: calc(33.3% - 2rem);
+		}
+	}
+	.speaker-list__item {
+		display: flex;
+		flex: 1 0 auto;
+		flex-direction: column;
+		.speaker-list__content {
+			display: flex;
+			flex: 1 0 auto;
+			flex-direction: column;
+			> * {
+				font-family: MuseoSans700;
+				font-size: get-size('500');
+			}
+
+			.speaker-list__summary {
+				font-family: MuseoSans500;
+			}
+
+			.speaker-list__content-time {
+				padding-top: get-size('400');
+			}
+		}
+	}
+}

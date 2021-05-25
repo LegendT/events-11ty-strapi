@@ -1,0 +1,16 @@
+footer.site-foot {
+	background-color: get-color('primary');
+	margin-top: get-size('700');
+	padding: get-size('500') 0 get-size('700') 0;
+	.socials {
+		display: flex;
+		margin-top: get-size('400');
+		li {
+			margin: 0 get-size('400');
+			margin-inline-start: 0;
+		}
+	}
+	svg {
+		color: get-color('white');
+	}
+}

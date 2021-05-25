@@ -1,0 +1,26 @@
+{% extends "layouts/base.html" %}
+{% set pageHeaderTitle = pageHeaderTitle %}
+{% set pageCriticalStyles = ['css/home.css'] %}
+
+{% block content %}
+
+  <article class="intro">
+    <div class="[ intro__header ]">
+      <h1 class="[ intro__heading ]">
+        <span class="visually-hidden">{{ intro.heading }}</span>
+      </h1>
+    </div>
+    <div class="[ intro__content ] [ flow ]">
+      <p class="intro__summary">{{ intro.summary }}</p>
+      <a href="{{ intro.buttonUrl }}" class="button">{{ intro.buttonText }}</a>
+    </div>
+
+  </article>
+  <div class="[ page-content ] [ flow wrapper ] [ flow-space-700 gap-top-700 ]">
+    {% if pageHeaderTitle %}
+      {% include "partials/page-header.html" %}
+    {% endif %}
+    {{ content | safe }}
+  </div>
+
+{% endblock %}

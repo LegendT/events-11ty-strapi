@@ -1,0 +1,10 @@
+.split-panel {
+	img {
+		@extend .clip-image;
+	}
+	p {
+		font-size: get-size('500');
+		@include apply-utility('gap-top', '400');
+		@include apply-utility('measure', 'long');
+	}
+}

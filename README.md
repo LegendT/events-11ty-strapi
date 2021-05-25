@@ -1,1 +1,1 @@
-# events-11ty-strapi
+# events-11ty

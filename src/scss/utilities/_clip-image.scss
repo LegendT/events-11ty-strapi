@@ -1,0 +1,13 @@
+.clip-image {
+	max-width: 300px;
+	float: left;
+	clip-path: circle(40%);
+	shape-outside: circle(44% at 50%);
+	margin-left: -2rem;
+	&[data-variant='radius-left'] {
+		float: right;
+		margin-right: -3rem;
+		// shape-outside: circle(42% at 55%);
+		shape-outside: inset(20% -8% 8% -10% round 50%);
+	}
+}

@@ -1,0 +1,56 @@
+{% set pageHeaderTitle = title %}
+{% extends "layouts/base.html" %}
+{% set partners = collections.partners %}
+{% set sponsors = collections.sponsors %}
+
+{% block content %}
+  <section class="speaker-item">
+    <div class="wrapper flow">
+      {% if pageHeaderTitle %}
+        {% include "partials/page-header.html" %}
+      {% endif %}
+    </div>
+    <div class="[ wrapper ] [ flow flow-space-700 ]">
+      <article>
+        <h2>Sponsors</h2>
+        <ol class="sponsors-list">
+          {% for sponsor in sponsors %}
+            <li class="[ flow flow-space-400 ]">
+              <h3>{{sponsor.data.sponsor}}</h3>
+              <div class="sponsors-list__text">
+                <h4>{{sponsor.data.name}}</h4>
+                <a href="{{ sponsor.url }}" class="[ card-link ]">
+                  <span class="visually-hidden">Find out more about {{sponsor.data.sponsor}}</span>
+                </a>
+                {{sponsor.data.summary | safe}}
+
+              </div>
+              <div class="sponsors-list__media">
+                <img src="{{sponsor.data.imageUrl}}" imageAlt="sponsor.data.imageAlt"/>
+              </div>
+            </li>
+          {% endfor %}
+        </ol>
+      </article>
+      <article>
+        <h2>Partners</h2>
+        <ul class="[ partners-list ] [ auto-grid ]">
+          {% for partner in partners %}
+            <li>
+              <h3>{{partner.data.partner}}</h3>
+              <div class="partners-list__media">
+                <img src="{{partner.data.imageUrl}}" imageAlt="partner.data.imageAlt"/>
+              </div>
+              <div class="partners-list__text">
+                <p>{{partner.data.summary | safe}}</p>
+              </div>
+              <a href="{{ partner.url }}" class="card-link">
+                <span class="visually-hidden">Find out more about </span>
+                {{partner.data.partner}}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </article>
+    </div>
+  </section>
+{% endblock %}
