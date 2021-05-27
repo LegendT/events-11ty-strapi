@@ -5,7 +5,7 @@ pageHeaderSummary = summary %}
 {% block
 content %}
     <div class="wrapper flow">
-        <article>{% include "partials/page-header.html" %}</article>
+        {# <article>{% include "partials/page-header.html" %}</article> #}
         <ol class="[ schedule-list ]">
             <li class="schedule-list__item bg-light-shade">
                 <h2>Registration</h2>
@@ -20,27 +20,27 @@ content %}
                 <article class="[ radius-panel ]" data-variant="horizontal">
                     <figure class="[ radius-panel__item ] [ auto-grid ]">
                         <div class="[ radius-panel__media ]">
-                            <img class="radius" src="{{ speakers[0].image.url }}" alt="{{ speakers[0].image.urlAlt }}"/>
+                            <img class="radius" src="{{ speaker[0].data.image }}" alt="{{ speaker[0].data.imageAlt }}"/>
                         </div>
                         <figcaption class="[ radius-panel__content ]">
                             <h2 class="[ text-600 ]">
                                 <span class="visually-hidden">Name:
                                 </span>
-                                {{ speakers[0].title }}
+                                {{ speaker[0].data.title }}
                             </h2>
                             <p class=" [ speaker-list__summary ] ">
                                 <span class="visually-hidden">Job title:
                                 </span>
-                                {{ speakers[0].job }}
+                                {{ speaker[0].data.summary }}
                             </p>
                             <p class=" [ schedule-list__content-time ] [ text-400 weight-bold measure-short flow-space-300 ] ">
                                 <span class="visually-hidden">Talk time
                                 </span>
-                                {{ speakers[0].talkTimeStart }} - {{ speakers[0].talkTimeEnd }}
+                                {{ speaker[0].talkTimeStart }} - {{ speaker[0].talkTimeEnd }}
                             </p>
-                            {{ speakers[0].talkDetails }}
-                            <a href="/speaker/{{ speakers[0].title | slug }}/" class="card-link">
-                                <span class="visually-hidden">read more about {{ speakers[0].title }}</span>
+                            {{ speaker[0].data.talkDetails }}
+                            <a href="/speaker/{{ speaker[0].data.title | slug }}/" class="card-link">
+                                <span class="visually-hidden">read more about {{ speaker[0].data.title }}</span>
                             </a>
                         </figcaption>
                     </figure>
@@ -50,27 +50,27 @@ content %}
 				<article class="[ radius-panel ]" data-variant="horizontal">
                     <figure class="[ radius-panel__item ] [ auto-grid ]">
                         <div class="[ radius-panel__media ]">
-                            <img class="radius" src="{{ speakers[1].image.url }}" alt="{{ speakers[1].image.urlAlt }}"/>
+                            <img class="radius" src="{{ speaker[1].data.image }}" alt="{{ speaker[1].data.imageAlt }}"/>
                         </div>
                         <figcaption class="[ radius-panel__content ]">
                             <h2 class="[ text-600 ]">
                                 <span class="visually-hidden">Name:
                                 </span>
-                                {{ speakers[1].title }}
+                                {{ speaker[1].data.title }}
                             </h2>
                             <p class=" [ speaker-list__summary ] ">
                                 <span class="visually-hidden">Job title:
                                 </span>
-                                {{ speakers[1].job }}
+                                {{ speaker[1].data.summary }}
                             </p>
                             <p class=" [ schedule-list__content-time ] [ text-400 weight-bold measure-short flow-space-300 ] ">
                                 <span class="visually-hidden">Talk time
                                 </span>
-                                {{ speakers[1].talkTimeStart }} - {{ speakers[1].talkTimeEnd }}
+                                {{ speaker[1].talkTimeStart }} - {{ speaker[1].talkTimeEnd }}
                             </p>
-                            {{ speakers[1].talkDetails }}
-                             <a href="/speaker/{{ speakers[1].title | slug }}/" class="card-link">
-                                <span class="visually-hidden">read more about {{ speakers[1].title }}</span>
+                            {{ speaker[1].data.talkDetails }}
+                             <a href="/speaker/{{ speaker[1].data.title | slug }}/" class="card-link">
+                                <span class="visually-hidden">read more about {{ speaker[1].data.title }}</span>
                             </a>
                         </figcaption>
                     </figure>
@@ -84,27 +84,27 @@ content %}
 				<article class="[ radius-panel ]" data-variant="horizontal">
                     <figure class="[ radius-panel__item ] [ auto-grid ]">
                         <div class="[ radius-panel__media ]">
-                            <img class="radius" src="{{ speakers[2].image.url }}" alt="{{ speakers[2].image.urlAlt }}"/>
+                            <img class="radius" src="{{ speaker[2].data.image }}" alt="{{ speaker[2].data.imageAlt }}"/>
                         </div>
                         <figcaption class="[ radius-panel__content ]">
                             <h2 class="[ text-600 ]">
                                 <span class="visually-hidden">Name:
                                 </span>
-                                {{ speakers[2].title }}
+                                {{ speaker[2].data.title }}
                             </h2>
                             <p class=" [ speaker-list__summary ] ">
                                 <span class="visually-hidden">Job title:
                                 </span>
-                                {{ speakers[2].job }}
+                                {{ speaker[2].data.summary }}
                             </p>
                             <p class=" [ schedule-list__content-time ] [ text-400 weight-bold measure-short flow-space-300 ] ">
                                 <span class="visually-hidden">Talk time
                                 </span>
-                                {{ speakers[2].talkTimeStart }} - {{ speakers[2].talkTimeEnd }}
+                                {{ speaker[2].talkTimeStart }} - {{ speaker[2].talkTimeEnd }}
                             </p>
-                            {{ speakers[2].talkDetails }}
-                             <a href="/speaker/{{ speakers[2].title | slug }}/" class="card-link">
-                                <span class="visually-hidden">read more about {{ speakers[2].title }}</span>
+                            {{ speaker[2].data.talkDetails }}
+                             <a href="/speaker/{{ speaker[2].data.title | slug }}/" class="card-link">
+                                <span class="visually-hidden">read more about {{ speaker[2].data.title }}</span>
                             </a>
                         </figcaption>
                     </figure>
@@ -114,27 +114,27 @@ content %}
 				<article class="[ radius-panel ]" data-variant="horizontal">
                     <figure class="[ radius-panel__item ] [ auto-grid ]">
                         <div class="[ radius-panel__media ]">
-                            <img class="radius" src="{{ speakers[3].image.url }}" alt="{{ speakers[3].image.urlAlt }}"/>
+                            <img class="radius" src="{{ speaker[3].data.image }}" alt="{{ speaker[3].data.imageAlt }}"/>
                         </div>
                         <figcaption class="[ radius-panel__content ]">
                             <h2 class="[ text-600 ]">
                                 <span class="visually-hidden">Name:
                                 </span>
-                                {{ speakers[3].title }}
+                                {{ speaker[3].data.title }}
                             </h2>
                             <p class=" [ speaker-list__summary ] ">
                                 <span class="visually-hidden">Job title:
                                 </span>
-                                {{ speakers[3].job }}
+                                {{ speaker[3].data.summary }}
                             </p>
                             <p class=" [ schedule-list__content-time ] [ text-400 weight-bold measure-short flow-space-300 ] ">
                                 <span class="visually-hidden">Talk time
                                 </span>
-                                {{ speakers[3].talkTimeStart }} - {{ speakers[3].talkTimeEnd }}
+                                {{ speaker[3].talkTimeStart }} - {{ speaker[3].talkTimeEnd }}
                             </p>
-                            {{ speakers[3].talkDetails }}
-                             <a href="/speaker/{{ speakers[3].title | slug }}/" class="card-link">
-                                <span class="visually-hidden">read more about {{ speakers[3].title }}</span>
+                            {{ speaker[3].data.talkDetails }}
+                             <a href="/speaker/{{ speaker[3].data.title | slug }}/" class="card-link">
+                                <span class="visually-hidden">read more about {{ speaker[3].data.title }}</span>
                             </a>
                         </figcaption>
                     </figure>
@@ -148,27 +148,27 @@ content %}
 				<article class="[ radius-panel ]" data-variant="horizontal">
                     <figure class="[ radius-panel__item ] [ auto-grid ]">
                         <div class="[ radius-panel__media ]">
-                            <img class="radius" src="{{ speakers[4].image.url }}" alt="{{ speakers[4].image.urlAlt }}"/>
+                            <img class="radius" src="{{ speaker[4].data.image }}" alt="{{ speaker[4].data.imageAlt }}"/>
                         </div>
                         <figcaption class="[ radius-panel__content ]">
                             <h2 class="[ text-600 ]">
                                 <span class="visually-hidden">Name:
                                 </span>
-                                {{ speakers[4].title }}
+                                {{ speaker[4].data.title }}
                             </h2>
                             <p class=" [ speaker-list__summary ] ">
                                 <span class="visually-hidden">Job title:
                                 </span>
-                                {{ speakers[4].job }}
+                                {{ speaker[4].data.summary }}
                             </p>
                             <p class=" [ schedule-list__content-time ] [ text-400 weight-bold measure-short flow-space-300 ] ">
                                 <span class="visually-hidden">Talk time
                                 </span>
-                                {{ speakers[4].talkTimeStart }} - {{ speakers[4].talkTimeEnd }}
+                                {{ speaker[4].talkTimeStart }} - {{ speaker[4].talkTimeEnd }}
                             </p>
-                            {{ speakers[4].talkDetails }}
-                             <a href="/speaker/{{ speakers[4].title | slug }}/" class="card-link">
-                                <span class="visually-hidden">read more about {{ speakers[4].title }}</span>
+                            {{ speaker[4].data.talkDetails }}
+                             <a href="/speaker/{{ speaker[4].data.title | slug }}/" class="card-link">
+                                <span class="visually-hidden">read more about {{ speaker[4].data.title }}</span>
                             </a>
                         </figcaption>
                     </figure>
@@ -178,27 +178,27 @@ content %}
 				<article class="[ radius-panel ]" data-variant="horizontal">
                     <figure class="[ radius-panel__item ] [ auto-grid ]">
                         <div class="[ radius-panel__media ]">
-                            <img class="radius" src="{{ speakers[5].image.url }}" alt="{{ speakers[5].image.urlAlt }}"/>
+                            <img class="radius" src="{{ speaker[5].data.image }}" alt="{{ speaker[5].data.imageAlt }}"/>
                         </div>
                         <figcaption class="[ radius-panel__content ]">
                             <h2 class="[ text-600 ]">
                                 <span class="visually-hidden">Name:
                                 </span>
-                                {{ speakers[5].title }}
+                                {{ speaker[5].data.title }}
                             </h2>
                             <p class=" [ speaker-list__summary ] ">
                                 <span class="visually-hidden">Job title:
                                 </span>
-                                {{ speakers[5].job }}
+                                {{ speaker[5].data.summary }}
                             </p>
                             <p class=" [ schedule-list__content-time ] [ text-400 weight-bold measure-short flow-space-300 ] ">
                                 <span class="visually-hidden">Talk time
                                 </span>
-                                {{ speakers[5].talkTimeStart }} - {{ speakers[5].talkTimeEnd }}
+                                {{ speaker[5].talkTimeStart }} - {{ speaker[5].talkTimeEnd }}
                             </p>
-                            {{ speakers[5].talkDetails }}
-                             <a href="/speaker/{{ speakers[5].title | slug }}/" class="card-link">
-                                <span class="visually-hidden">read more about {{ speakers[5].title }}</span>
+                            {{ speaker[5].data.talkDetails }}
+                             <a href="/speaker/{{ speaker[5].data.title | slug }}/" class="card-link">
+                                <span class="visually-hidden">read more about {{ speaker[5].data.title }}</span>
                             </a>
                         </figcaption>
                     </figure>
@@ -212,27 +212,27 @@ content %}
                 <article class="[ radius-panel ]" data-variant="horizontal">
                     <figure class="[ radius-panel__item ] [ auto-grid ]">
                         <div class="[ radius-panel__media ]">
-                            <img class="radius" src="{{ speakers[6].image.url }}" alt="{{ speakers[6].image.urlAlt }}"/>
+                            <img class="radius" src="{{ speaker[6].data.image }}" alt="{{ speaker[6].data.imageAlt }}"/>
                         </div>
                         <figcaption class="[ radius-panel__content ]">
                             <h2 class="[ text-600 ]">
                                 <span class="visually-hidden">Name:
                                 </span>
-                                {{ speakers[6].title }}
+                                {{ speaker[6].data.title }}
                             </h2>
                             <p class=" [ speaker-list__summary ] ">
                                 <span class="visually-hidden">Job title:
                                 </span>
-                                {{ speakers[6].job }}
+                                {{ speaker[6].data.summary }}
                             </p>
                             <p class=" [ schedule-list__content-time ] [ text-400 weight-bold measure-short flow-space-300 ] ">
                                 <span class="visually-hidden">Talk time
                                 </span>
-                                {{ speakers[6].talkTimeStart }} - {{ speakers[6].talkTimeEnd }}
+                                {{ speaker[6].talkTimeStart }} - {{ speaker[6].talkTimeEnd }}
                             </p>
-                            {{ speakers[6].talkDetails }}
-                             <a href="/speaker/{{ speakers[6].title | slug }}/" class="card-link">
-                                <span class="visually-hidden">read more about {{ speakers[6].title }}</span>
+                            {{ speaker[6].data.talkDetails }}
+                             <a href="/speaker/{{ speaker[6].data.title | slug }}/" class="card-link">
+                                <span class="visually-hidden">read more about {{ speaker[6].data.title }}</span>
                             </a>
                         </figcaption>
                     </figure>

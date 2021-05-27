@@ -1,15 +1,18 @@
 module.exports = (config) => {
+	const ErrorOverlay = require('eleventy-plugin-error-overlay')
 	const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js')
 	// Filters
 	const dateFilter = require('./src/filters/date-filter.js')
 	const w3DateFilter = require('./src/filters/w3-date-filter.js')
 	const rssPlugin = require('@11ty/eleventy-plugin-rss')
+
 	// Add filters
 	config.addFilter('dateFilter', dateFilter)
 	config.addFilter('w3DateFilter', w3DateFilter)
 
 	// Plugins
 	config.addPlugin(rssPlugin)
+	config.addPlugin(ErrorOverlay)
 
 	// Transforms
 	const htmlMinTransform = require('./src/transforms/html-min-transform.js')
@@ -27,28 +30,12 @@ module.exports = (config) => {
 	config.addPassthroughCopy('./src/robots.txt')
 	config.addPassthroughCopy('./src/fonts/')
 	config.addPassthroughCopy('./src/js/')
-
-	// Returns speaker items, sorted by display order
-	config.addCollection('speakers', (collection) => {
-		return sortByDisplayOrder(
-			collection.getFilteredByGlob('./src/speakers/*.md')
-		)
-	})
-	// Returns sponsors items, sorted by display order
-	config.addCollection('sponsors', (collection) => {
-		return sortByDisplayOrder(
-			collection.getFilteredByGlob('./src/sponsors/*.md')
-		)
-	})
-
-	// Returns partners items, sorted by display order
-	config.addCollection('partners', (collection) => {
-		return sortByDisplayOrder(
-			collection.getFilteredByGlob('./src/partners/*.md')
-		)
+	config.addPassthroughCopy({
+		'./strapi-api/public/uploads': 'uploads',
 	})
 	// Tell 11ty to use the .eleventyignore and ignore our .gitignore file
 	config.setUseGitIgnore(false)
+
 
 	return {
 		markdownTemplateEngine: 'njk',
@@ -58,5 +45,6 @@ module.exports = (config) => {
 			input: 'src',
 			output: 'dist',
 		},
+		jsDataFileSuffix: '.data',
 	}
 }

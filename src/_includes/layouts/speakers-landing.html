@@ -1,33 +1,35 @@
 {% extends "layouts/base.html" %}
-{% set pageHeaderTitle = title %}
+{% set pageHeaderTitle = pageTitle %}
 {% set pageHeaderSummary = content %}
 {% block content %}
 	<div class="wrapper flow">
 		<article>{% include "partials/page-header.html" %}</article>
 		<div class="[ speakers-list ]">
 			<article class="[ radius-panel ][ auto-grid ]">
-				{% for item in collections.speakers %}
+				{% for speaker in speakers %}
 					<figure class="[ radius-panel__item ] [ flow ]">
+
 						<div class="[ radius-panel__media ]">
 							<img
 								class="radius"
-								src="{{ item.data.image }}"
-								alt="{{ item.data.imageAlt }}"
+								src="{{ speaker.image.url }}"
+								alt="{{ speaker.title }}"
 							/>
 						</div>
+
 						<figcaption class="[ radius-panel__content ]">
 							<h2 class="[ text-600 ]">
 								<span class="visually-hidden">Name: </span>
-								{{item.data.title }}
+								{{speaker.title }}
 							</h2>
 							<p class="[ radius-panel__summary ] [ text-500 measure-short flow-space-300 ]">
-								<span class="visually-hidden">Job title: </span>{{item.data.summary }}
+								<span class="visually-hidden">Job title: </span>{{speaker.job }}
 							</p>
 							<p class="[ radius-panel__content-time ] [ text-400 weight-bold measure-short flow-space-300 ]">
-								<span class="visually-hidden">Talk time </span>{{item.data.time }}
+								<span class="visually-hidden">Talk time </span>{{speaker.talkTimeStart}}
 							</p>
-							<a href="{{ item.url }}" class="card-link">
-								<span class="visually-hidden">read more about {{ item.data.title }}</span>
+							<a href="{{ title | slug }}/" class="card-link">
+								<span class="visually-hidden">read more about {{ speaker.title }}</span>
 							</a>
 						</figcaption>
 					</figure>

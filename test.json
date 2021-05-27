@@ -1,0 +1,46 @@
+[
+	{
+		"id": 1,
+		"sponsorLevel": "Gold",
+		"sponsorName": "Balsamiq",
+		"website": "https://balsamiq.com/",
+		"logoAltText": "balsamiq logo",
+		"summary": "Balsamiq is the maker of the industry-leading rapid wireframing software ",
+		"text": "Balsamiq is the maker of the industry-leading rapid wireframing software that combines the simplicity of paper sketching with the power of a digital tool so that teams can focus on what's important. Balsamiq is a small and personable company that competes on usability and customer service. Balsamiq believes work should be fun, and that life is too short for bad software.",
+		"displayOrder": "1",
+		"published_at": "2021-05-26T09:21:59.835Z",
+		"created_at": "2021-05-26T09:18:08.598Z",
+		"updated_at": "2021-05-26T09:21:59.858Z",
+		"logo": {
+			"id": 16,
+			"name": "balsamiq.png",
+			"alternativeText": "",
+			"caption": "",
+			"width": 440,
+			"height": 126,
+			"formats": {
+				"thumbnail": {
+					"name": "thumbnail_balsamiq.png",
+					"hash": "thumbnail_balsamiq_63f1bebd55",
+					"ext": ".png",
+					"mime": "image/png",
+					"width": 245,
+					"height": 70,
+					"size": 14.88,
+					"path": null,
+					"url": "/uploads/thumbnail_balsamiq_63f1bebd55.png"
+				}
+			},
+			"hash": "balsamiq_63f1bebd55",
+			"ext": ".png",
+			"mime": "image/png",
+			"size": 22.35,
+			"url": "/uploads/balsamiq_63f1bebd55.png",
+			"previewUrl": null,
+			"provider": "local",
+			"provider_metadata": null,
+			"created_at": "2021-05-26T09:13:33.264Z",
+			"updated_at": "2021-05-26T09:13:33.290Z"
+		}
+	}
+]

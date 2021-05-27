@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "speakers",
+  "info": {
+    "name": "Speakers",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "job": {
+      "type": "string"
+    },
+    "about": {
+      "type": "richtext"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "talkTimeStart": {
+      "type": "string"
+    },
+    "talkTimeEnd": {
+      "type": "string"
+    },
+    "talkDetails": {
+      "type": "richtext"
+    },
+    "talkSummary": {
+      "type": "string"
+    },
+    "imageAlt": {
+      "type": "string"
+    },
+    "displayOrder": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

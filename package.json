@@ -1,9 +1,10 @@
 {
-	"name": "events-11ty",
+	"name": "events-11ty-strapi",
 	"version": "1.0.0",
 	"description": "",
 	"main": ".eleventy.js",
 	"scripts": {
+		"build": "eleventy --quiet",
 		"start": "npx gulp && concurrently \"npx gulp watch\" \"npx eleventy --serve\"",
 		"production": "NODE_ENV=production npx gulp && NODE_ENV=production npx eleventy"
 	},
@@ -14,9 +15,14 @@
 		"@11ty/eleventy": "^0.12.1",
 		"@11ty/eleventy-cache-assets": "^2.2.1",
 		"@11ty/eleventy-plugin-rss": "^1.1.1",
-		"@manustays/eleventy-plugin-generate-social-images": "^4.1.0",
+		"axios": "^0.21.1",
+		"child_process": "^1.0.2",
 		"concurrently": "^6.1.0",
+		"eleventy-plugin-error-overlay": "^0.1.2",
 		"eleventy-plugin-svg-contents": "^0.7.0",
+		"express": "^4.17.1",
+		"filendir": "^2.0.0",
+		"fs": "0.0.1-security",
 		"gorko": "^0.3.0",
 		"gulp": "^4.0.2",
 		"gulp-clean-css": "^4.3.0",
@@ -24,6 +30,8 @@
 		"gulp-sass": "^4.1.0",
 		"html-minifier": "^4.0.0",
 		"moment": "^2.29.1",
+		"node-fetch": "^2.6.1",
+		"path": "^0.12.7",
 		"sass": "^1.32.13"
 	}
 }

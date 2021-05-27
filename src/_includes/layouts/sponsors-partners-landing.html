@@ -1,7 +1,7 @@
 {% set pageHeaderTitle = title %}
 {% extends "layouts/base.html" %}
-{% set partners = collections.partners %}
-{% set sponsors = collections.sponsors %}
+{% set partners = partners %}
+{% set sponsors = sponsors %}
 
 {% block content %}
   <section class="speaker-item">
@@ -16,17 +16,17 @@
         <ol class="sponsors-list">
           {% for sponsor in sponsors %}
             <li class="[ flow flow-space-400 ]">
-              <h3>{{sponsor.data.sponsor}}</h3>
+              <h3>{{sponsor.sponsorLevel}}</h3>
               <div class="sponsors-list__text">
-                <h4>{{sponsor.data.name}}</h4>
+                <h4>{{sponsor.sponsorName}}</h4>
                 <a href="{{ sponsor.url }}" class="[ card-link ]">
-                  <span class="visually-hidden">Find out more about {{sponsor.data.sponsor}}</span>
+                  <span class="visually-hidden">Find out more about {{sponsor.sponsorName}}</span>
                 </a>
                 {{sponsor.data.summary | safe}}
 
               </div>
               <div class="sponsors-list__media">
-                <img src="{{sponsor.data.imageUrl}}" imageAlt="sponsor.data.imageAlt"/>
+                <img src="{{sponsor.logo.url}}" imageAlt="sponsor.logoAltText"/>
               </div>
             </li>
           {% endfor %}
@@ -37,16 +37,16 @@
         <ul class="[ partners-list ] [ auto-grid ]">
           {% for partner in partners %}
             <li>
-              <h3>{{partner.data.partner}}</h3>
+              <h3>{{partner.partnerName}}</h3>
               <div class="partners-list__media">
-                <img src="{{partner.data.imageUrl}}" imageAlt="partner.data.imageAlt"/>
+                <img src="{{partner.logo.url}}" imageAlt="partner.logoAlt"/>
               </div>
               <div class="partners-list__text">
-                <p>{{partner.data.summary | safe}}</p>
+                <p>{{partner.summary | safe}}</p>
               </div>
-              <a href="{{ partner.url }}" class="card-link">
+              <a href="{{ partner.website }}" class="card-link">
                 <span class="visually-hidden">Find out more about </span>
-                {{partner.data.partner}}</a>
+                {{partner.partnerName}}</a>
             </li>
           {% endfor %}
         </ul>
