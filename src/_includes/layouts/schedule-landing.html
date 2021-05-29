@@ -1,11 +1,11 @@
 {% extends "layouts/base.html" %}
-{% set pageHeaderTitle = title %}
+{# {% set pageHeaderTitle = title %}
 {% set
-pageHeaderSummary = summary %}
+pageHeaderSummary = summary %} #}
 {% block
 content %}
     <div class="wrapper flow">
-        <article>{% include "partials/page-header.html" %}</article>
+        {# <article>{% include "partials/page-header.html" %}</article> #}
         <ol class="[ schedule-list ]">
             <li class="schedule-list__item bg-light-shade">
                 <h2>Registration</h2>
@@ -39,7 +39,7 @@ content %}
                                 {{ speakers[0].talkTimeStart }} - {{ speakers[0].talkTimeEnd }}
                             </p>
                             {{ speakers[0].talkDetails }}
-                            <a href="/speaker/{{ speakers[0].title | slug }}/" class="card-link">
+                            <a href="/speaker/{{ speakers[0].slug }}/" class="card-link">
                                 <span class="visually-hidden">read more about {{ speakers[0].title }}</span>
                             </a>
                         </figcaption>
@@ -69,7 +69,7 @@ content %}
                                 {{ speakers[1].talkTimeStart }} - {{ speakers[1].talkTimeEnd }}
                             </p>
                             {{ speakers[1].talkDetails }}
-                             <a href="/speaker/{{ speakers[1].title | slug }}/" class="card-link">
+                             <a href="/speaker/{{ speakers[1].slug}}/" class="card-link">
                                 <span class="visually-hidden">read more about {{ speakers[1].title }}</span>
                             </a>
                         </figcaption>
@@ -103,7 +103,7 @@ content %}
                                 {{ speakers[2].talkTimeStart }} - {{ speakers[2].talkTimeEnd }}
                             </p>
                             {{ speakers[2].talkDetails }}
-                             <a href="/speaker/{{ speakers[2].title | slug }}/" class="card-link">
+                             <a href="/speaker/{{ speakers[2].slug}}/" class="card-link">
                                 <span class="visually-hidden">read more about {{ speakers[2].title }}</span>
                             </a>
                         </figcaption>
@@ -133,7 +133,7 @@ content %}
                                 {{ speakers[3].talkTimeStart }} - {{ speakers[3].talkTimeEnd }}
                             </p>
                             {{ speakers[3].talkDetails }}
-                             <a href="/speaker/{{ speakers[3].title | slug }}/" class="card-link">
+                             <a href="/speaker/{{ speakers[3].slug}}/" class="card-link">
                                 <span class="visually-hidden">read more about {{ speakers[3].title }}</span>
                             </a>
                         </figcaption>
@@ -167,7 +167,7 @@ content %}
                                 {{ speakers[4].talkTimeStart }} - {{ speakers[4].talkTimeEnd }}
                             </p>
                             {{ speakers[4].talkDetails }}
-                             <a href="/speaker/{{ speakers[4].title | slug }}/" class="card-link">
+                             <a href="/speaker/{{ speakers[4].slug}}/" class="card-link">
                                 <span class="visually-hidden">read more about {{ speakers[4].title }}</span>
                             </a>
                         </figcaption>
@@ -197,7 +197,7 @@ content %}
                                 {{ speakers[5].talkTimeStart }} - {{ speakers[5].talkTimeEnd }}
                             </p>
                             {{ speakers[5].talkDetails }}
-                             <a href="/speaker/{{ speakers[5].title | slug }}/" class="card-link">
+                             <a href="/speaker/{{ speakers[5].slug}}/" class="card-link">
                                 <span class="visually-hidden">read more about {{ speakers[5].title }}</span>
                             </a>
                         </figcaption>
@@ -231,7 +231,7 @@ content %}
                                 {{ speakers[6].talkTimeStart }} - {{ speakers[6].talkTimeEnd }}
                             </p>
                             {{ speakers[6].talkDetails }}
-                             <a href="/speaker/{{ speakers[6].title | slug }}/" class="card-link">
+                             <a href="/speaker/{{ speakers[6].slug}}/" class="card-link">
                                 <span class="visually-hidden">read more about {{ speakers[6].title }}</span>
                             </a>
                         </figcaption>

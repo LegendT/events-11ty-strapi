@@ -16,7 +16,8 @@ const watcher = () => {
 }
 
 // The default (if someone just runs `gulp`) is to run each task in parrallel
-exports.default = parallel(images, sass)
+// exports.default = parallel(images, sass)
+exports.default = parallel(sass)
 
 // This is our watcher task that instructs gulp to watch directories and
 // act accordingly

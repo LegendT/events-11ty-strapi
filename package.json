@@ -6,7 +6,8 @@
 	"scripts": {
 		"build": "eleventy --quiet",
 		"start": "npx gulp && concurrently \"npx gulp watch\" \"npx eleventy --serve\"",
-		"production": "NODE_ENV=production npx gulp && NODE_ENV=production npx eleventy"
+		"production": "NODE_ENV=production npx gulp && NODE_ENV=production npx eleventy",
+		"debug": "DEBUG=* eleventy"
 	},
 	"keywords": [],
 	"author": "Anthony George",
@@ -14,10 +15,13 @@
 	"dependencies": {
 		"@11ty/eleventy": "^0.12.1",
 		"@11ty/eleventy-cache-assets": "^2.2.1",
+		"@11ty/eleventy-navigation": "^0.2.0",
 		"@11ty/eleventy-plugin-rss": "^1.1.1",
+		"@11ty/eleventy-plugin-syntaxhighlight": "^3.1.1",
 		"axios": "^0.21.1",
 		"child_process": "^1.0.2",
 		"concurrently": "^6.1.0",
+		"dotenv": "^10.0.0",
 		"eleventy-plugin-error-overlay": "^0.1.2",
 		"eleventy-plugin-svg-contents": "^0.7.0",
 		"express": "^4.17.1",
@@ -29,6 +33,8 @@
 		"gulp-imagemin": "^7.1.0",
 		"gulp-sass": "^4.1.0",
 		"html-minifier": "^4.0.0",
+		"markdown-it": "^12.0.6",
+		"markdown-it-anchor": "^7.1.0",
 		"moment": "^2.29.1",
 		"node-fetch": "^2.6.1",
 		"path": "^0.12.7",

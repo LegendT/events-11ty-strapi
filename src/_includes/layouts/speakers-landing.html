@@ -2,12 +2,21 @@
 {% set pageHeaderTitle = pageTitle %}
 {% set pageHeaderSummary = content %}
 {% block content %}
+
 	<div class="wrapper flow">
 		<article>{% include "partials/page-header.html" %}</article>
 		<div class="[ speakers-list ]">
 			<article class="[ radius-panel ][ auto-grid ]">
+				<h1>WTF</h1>
 				{% for speaker in speakers %}
-					<figure class="[ radius-panel__item ] [ flow ]">
+				<h2>Cabbage list</h2>
+				<ul>
+					<li>{{speaker.title}}</li>
+					<li>{{speakers.speaker.title}}</li>
+					<li>{{title}}</li>
+					<li>{{job}}</li>
+				</ul>
+					{# <figure class="[ radius-panel__item ] [ flow ]">
 
 						<div class="[ radius-panel__media ]">
 							<img
@@ -32,7 +41,7 @@
 								<span class="visually-hidden">read more about {{ speaker.title }}</span>
 							</a>
 						</figcaption>
-					</figure>
+					</figure> #}
 				{% endfor %}
 			</article>
 		</div>

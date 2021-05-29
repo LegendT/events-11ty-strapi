@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = (config) => {
 	const ErrorOverlay = require('eleventy-plugin-error-overlay')
 	const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js')
@@ -5,6 +7,12 @@ module.exports = (config) => {
 	const dateFilter = require('./src/filters/date-filter.js')
 	const w3DateFilter = require('./src/filters/w3-date-filter.js')
 	const rssPlugin = require('@11ty/eleventy-plugin-rss')
+
+	// Slugify fix
+	// Fetch built-in `slug()` filter...
+	// const slugFn = config.getFilter('slug')
+	// Alias our custom `slug` filter which calls the built-in `slug()` filter with stringified content.
+	// config.addFilter('slug', (url) => slugFn(url.toString()))
 
 	// Add filters
 	config.addFilter('dateFilter', dateFilter)
@@ -36,7 +44,6 @@ module.exports = (config) => {
 	// Tell 11ty to use the .eleventyignore and ignore our .gitignore file
 	config.setUseGitIgnore(false)
 
-
 	return {
 		markdownTemplateEngine: 'njk',
 		dataTemplateEngine: 'njk',
@@ -44,6 +51,7 @@ module.exports = (config) => {
 		dir: {
 			input: 'src',
 			output: 'dist',
+			data: '_data',
 		},
 		jsDataFileSuffix: '.data',
 	}

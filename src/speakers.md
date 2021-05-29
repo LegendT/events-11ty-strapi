@@ -1,5 +1,6 @@
 ---
-title: 'Speakers'
+title: 'SpeakersX'
 layout: 'layouts/speakers-landing.html'
-data: 'speakers'
+data: speakers
+permalink: speakers/index.html
 ---

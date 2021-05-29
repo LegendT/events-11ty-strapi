@@ -10,9 +10,9 @@ const images = () => {
 		.pipe(
 			imagemin(
 				[
-					imagemin.mozjpeg({ quality: 40, progressive: true }),
+					imagemin.mozjpeg({ quality: 10, progressive: true }),
 					imagemin.optipng({
-						optimizationLevel: 2,
+						optimizationLevel: 1,
 						interlaced: null,
 					}),
 				],
