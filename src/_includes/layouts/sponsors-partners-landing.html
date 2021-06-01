@@ -15,10 +15,6 @@
         <h2>Sponsors</h2>
         <ol class="sponsors-list">
           {% for sponsor in sponsors %}
-          <h2>sponsor list</h2>
-                    <ul>
-                      <li>{{sponsor.sponsorName}}</li>
-                    </ul>
             <li class="[ flow flow-space-400 ]">
               <h3>{{sponsor.sponsorLevel}}</h3>
               <div class="sponsors-list__text">
@@ -40,11 +36,6 @@
         <h2>Partners</h2>
         <ul class="[ partners-list ] [ auto-grid ]">
           {% for partner in partners %}
-                    <h2>partner list</h2>
-                    <ul>
-                      <li>{{partner.partnerName}}</li>
-                    </ul>
-            <li>
               <h3>{{partner.partnerName}}</h3>
               <div class="partners-list__media">
                 <img src="{{partner.logo.url}}" imageAlt="partner.logoAlt"/>

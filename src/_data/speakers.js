@@ -58,8 +58,7 @@ async function getAllSpeakers() {
 
 			// update speakers array with the data from the JSON response
 			speakers = speakers.concat(response.data.speakers)
-			console.log(speakers, speakers)
-			// speaker = speakers
+			// console.log(speakers, speakers)
 			// prepare for next query
 			recordsToSkip += recordsPerQuery
 
@@ -78,15 +77,15 @@ async function getAllSpeakers() {
 			id: item.id,
 			title: item.title,
 			slug: item.slug,
-			// job: item.job,
-			// about: item.about,
-			// image: item.image,
-			// talkTimeStart: item.talkTimeStart,
-			// talkTimeEnd: item.talkTimeEnd,
-			// talkDetails: item.talkDetails,
-			// talkSummary: item.talkSummary,
-			// imageAlt: item.imageAlt,
-			// displayOrder: item.displayOrder,
+			job: item.job,
+			about: item.about,
+			image: item.image,
+			talkTimeStart: item.talkTimeStart,
+			talkTimeEnd: item.talkTimeEnd,
+			talkDetails: item.talkDetails,
+			talkSummary: item.talkSummary,
+			imageAlt: item.imageAlt,
+			displayOrder: item.displayOrder,
 		}
 	})
 	// return formatted speakers
