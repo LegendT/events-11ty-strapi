@@ -1,4 +1,3 @@
 {
-	"layout": "layouts/speakers-item.html",
-	"permalink": "speaker/{{ slug }}/index.html"
+	"layout": "layouts/speakers-item.html"
 }

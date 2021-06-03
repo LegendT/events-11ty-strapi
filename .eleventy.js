@@ -8,12 +8,6 @@ module.exports = (config) => {
 	const w3DateFilter = require('./src/filters/w3-date-filter.js')
 	const rssPlugin = require('@11ty/eleventy-plugin-rss')
 
-	// Slugify fix
-	// Fetch built-in `slug()` filter...
-	// const slugFn = config.getFilter('slug')
-	// Alias our custom `slug` filter which calls the built-in `slug()` filter with stringified content.
-	// config.addFilter('slug', (url) => slugFn(url.toString()))
-
 	// Add filters
 	config.addFilter('dateFilter', dateFilter)
 	config.addFilter('w3DateFilter', w3DateFilter)

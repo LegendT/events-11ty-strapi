@@ -23,6 +23,7 @@ const speakers = async () => {
 
 			for (const speaker of speakers) {
 				const { title, slug } = speaker
+				// const content = `--- \ntitle: ${title}\ntags: speaker\npermalink: /speaker/{{title | slug}}/index.html\n---\n`
 				const content = `--- \ntitle: ${title}\ntags: speaker\n---\n`
 
 				try {

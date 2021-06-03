@@ -13,7 +13,7 @@
 						<div class="[ radius-panel__media ]">
 							<img
 								class="radius"
-								src="{{ speaker.image.url }}"
+								src="{{ speaker.image }}"
 								alt="{{ speaker.title }}"
 							/>
 						</div>
@@ -29,7 +29,7 @@
 							<p class="[ radius-panel__content-time ] [ text-400 weight-bold measure-short flow-space-300 ]">
 								<span class="visually-hidden">Talk time </span>{{speaker.talkTimeStart}}
 							</p>
-							<a href="{{ title | slug }}/" class="card-link">
+							<a href="/speakers/{{ speaker.slug }}/" class="card-link">
 								<span class="visually-hidden">read more about {{ speaker.title }}</span>
 							</a>
 						</figcaption>

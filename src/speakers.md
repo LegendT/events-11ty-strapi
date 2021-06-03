@@ -1,6 +1,6 @@
 ---
-title: 'Speakers'
+pageTitle: 'Speakers'
 layout: 'layouts/speakers-landing.html'
 data: speakers
-permalink: speakers/{{slug}}/
+permalink: speakers/index.html
 ---

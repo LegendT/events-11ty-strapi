@@ -33,11 +33,11 @@ async function getAllSpeakers() {
 							image {
 								url
 							}
+							imageAlt
 							talkTimeStart
 							talkTimeEnd
 							talkDetails
 							talkSummary
-							imageAlt
 							displayOrder
 							}
           				}`,
@@ -79,12 +79,12 @@ async function getAllSpeakers() {
 			slug: item.slug,
 			job: item.job,
 			about: item.about,
-			image: item.image,
+			image: item.image.url,
+			imageAlt: item.imageAlt,
 			talkTimeStart: item.talkTimeStart,
 			talkTimeEnd: item.talkTimeEnd,
 			talkDetails: item.talkDetails,
 			talkSummary: item.talkSummary,
-			imageAlt: item.imageAlt,
 			displayOrder: item.displayOrder,
 		}
 	})
