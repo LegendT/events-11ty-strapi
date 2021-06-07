@@ -22,10 +22,11 @@ const speakers = async () => {
 			console.log(`Found ${speakers.length} speaker(s)`)
 
 			for (const speaker of speakers) {
-				const { title, slug } = speaker
-				//const content = `--- \ntitle: ${title}\ntags: speaker\npermalink: speakers/${slug}/index.html\nlayout: layouts/speakers-item.html\n---\n`
-				const content = `--- \ntitle: ${title}\ntags: speaker\n---\n`
-
+				const { title, slug, about, id, job } = speaker
+				const content = `---\ntitle: '${title}'\ntags: 'speaker'\npermalink: 'speakers/${slug}/index.html'\nlayout: 'layouts/speakers-item.html'\ndata: 'speakers'\njob: '${job}'\n---\n`
+				//const content = `--- \ntitle: ${title}\ntags: speaker\n---\n`
+				//const content = `--- \ntitle: ${title}\ntags: speaker\npermalink: speakers/${slug}/index.html\n---\n`
+				console.log(`${speaker.title}`)
 				try {
 					// const filename = `${slug}.md`
 					const filename = path.join('src', 'speakers', `${slug}.md`)
@@ -42,7 +43,7 @@ const speakers = async () => {
 const init = async () => {
 	await speakers()
 
-	let watcher = spawn('npm', ['run', 'build'])
+	let watcher = spawn('npm', ['run', 'start'])
 
 	watcher.stdout.on('data', (data) => {
 		console.log(`${data}`)
@@ -57,7 +58,7 @@ const init = async () => {
 
 		watcher.kill()
 
-		watcher = spawn('npm', ['run', 'build'])
+		watcher = spawn('npm', ['run', 'start'])
 
 		watcher.stdout.on('data', (data) => {
 			console.log(`${data}`)
