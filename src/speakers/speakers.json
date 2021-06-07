@@ -1,3 +1,7 @@
 {
-	"layout": "layouts/speakers-item.html"
+	"layout": "layouts/speakers-item.html",
+	"pagination": {
+		"data": "speakers"
+	},
+	"permalink": "permalink: speakers/${slug}/index.html"
 }

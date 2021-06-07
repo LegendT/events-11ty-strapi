@@ -1,30 +1,17 @@
-<div>TEST:
-    <ul>
-        <li>{{speakers.data.about}}</li>
-        <li>{{speakers.about}}</li>
-        <li>{{speaker.about}}</li>
-        <li>{{about}}</li>
-        <li>{{speakers.data.job}}</li>
-        <li>{{speakers.job}}</li>
-        <li>{{speaker.job}}</li>
-        <li>{{about}}</li>
-        <li>{{title}}</li>
-    </ul>
-    </div>
 <article class="split-panel">
     <div class="split-panel__content">
         <figure class="[ flow ]">
             <div class="[ gallery__media ] [ frame ]">
                 <img
                 class="radius"
-                src="{{ image }}"
-                alt="{{ imageAlt }}"
+                src="{{ speaker.image }}"
+                alt="{{ speaker.imageAlt }}"
             />
             </div>
 
             <figcaption class="leading-loose flow-space-700">
-                {% if about %}
-                    {{ about | safe }}
+                {% if speaker.about %}
+                    {{ speaker.about | safe }}
                 {%endif%}
             </figcaption>
         </figure>
@@ -33,8 +20,8 @@
         <div class="content">
             <h2 class="gap-top-600">Talk detatils</h2>
             <div class="leading-flat flow flow-space-700">
-                {% if talkDetails %}
-                    <p>{{ talkDetails | safe }}</p>
+                {% if speaker.talkDetails %}
+                    <p>{{ speaker.talkDetails | safe }}</p>
                     {%endif%}
             </div>
         </div>

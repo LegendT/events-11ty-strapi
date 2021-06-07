@@ -7,6 +7,7 @@ module.exports = (config) => {
 	const dateFilter = require('./src/filters/date-filter.js')
 	const w3DateFilter = require('./src/filters/w3-date-filter.js')
 	const rssPlugin = require('@11ty/eleventy-plugin-rss')
+	//config.setDynamicPermalinks(false)
 
 	// Add filters
 	config.addFilter('dateFilter', dateFilter)
@@ -26,7 +27,9 @@ module.exports = (config) => {
 	if (isProduction) {
 		config.addTransform('htmlmin', htmlMinTransform)
 	}
-
+	config.addCollection('blog', (collection) => {
+		return collection.getFilteredByGlob('./src/speakers/*.md')
+	})
 	// Set directories to pass through to the dist folder
 	//config.addPassthroughCopy('./src/images/')
 	config.addPassthroughCopy('./src/robots.txt')

@@ -1,9 +1,16 @@
+---
+pagination:
+    data: speakers
+    size: 1
+    alias: speaker
+---
+
 {% set pageHeaderTitle = title %}
 {% set pageHeaderSummary = summary %}
 {% extends "layouts/base.html" %}
 
 {% block content %}
-<div>TEST:
+<div>Test Data:
     <ul>
         <li>{{speakers.data.about}}</li>
         <li>{{speakers.about}}</li>

@@ -4,8 +4,9 @@
 	"description": "",
 	"main": ".eleventy.js",
 	"scripts": {
-		"build": "eleventy --quiet",
-		"start": "npx gulp && concurrently \"npx gulp watch\" \"npx eleventy --serve\" \"node 11ty.js\" ",
+		"build": "eleventy --quiet --serve",
+		"data": "rimraf dist && node 11ty.js",
+		"start": "npx gulp && concurrently \"npx gulp watch\" \"npx eleventy --serve\" ",
 		"production": "NODE_ENV=production npx gulp && NODE_ENV=production npx eleventy",
 		"debug": "DEBUG=* eleventy"
 	},

@@ -23,7 +23,7 @@ const speakers = async () => {
 
 			for (const speaker of speakers) {
 				const { title, slug } = speaker
-				// const content = `--- \ntitle: ${title}\ntags: speaker\npermalink: /speaker/{{title | slug}}/index.html\n---\n`
+				//const content = `--- \ntitle: ${title}\ntags: speaker\npermalink: speakers/${slug}/index.html\nlayout: layouts/speakers-item.html\n---\n`
 				const content = `--- \ntitle: ${title}\ntags: speaker\n---\n`
 
 				try {
@@ -48,7 +48,7 @@ const init = async () => {
 		console.log(`${data}`)
 	})
 
-	app.use(express.static('_site'))
+	app.use(express.static('dist'))
 
 	app.get('/reload', async (req, res) => {
 		await services()
