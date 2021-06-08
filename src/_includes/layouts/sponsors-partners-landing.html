@@ -19,10 +19,10 @@
               <h3>{{sponsor.sponsorLevel}}</h3>
               <div class="sponsors-list__text">
                 <h4>{{sponsor.sponsorName}}</h4>
-                <a href="{{ sponsor.url }}" class="[ card-link ]">
+                <a href="{{ sponsor.website }}" class="[ card-link ]">
                   <span class="visually-hidden">Find out more about {{sponsor.sponsorName}}</span>
                 </a>
-                {{sponsor.data.summary | safe}}
+                <p>{{sponsor.summary | safe}}</p>
 
               </div>
               <div class="sponsors-list__media">
