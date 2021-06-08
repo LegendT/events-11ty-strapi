@@ -22,8 +22,19 @@ const speakers = async () => {
 			console.log(`Found ${speakers.length} speaker(s)`)
 
 			for (const speaker of speakers) {
-				const { title, slug } = speaker
-				const content = `--- \ntitle: ${title}\ntags: speaker\n---\n`
+				const {
+					title,
+					slug,
+					job,
+					about,
+					talkTimeStart,
+					talkTimeEnd,
+					image,
+					imageAlt,
+					talkDetails,
+					talkSummary,
+				} = speaker
+				const content = `--- \ntitle: "${title}"\njob: "${job}"\nabout: "${about}"\ntalkTimeStart: "${talkTimeStart}"\ntalkTimeEnd: "${talkTimeEnd}"\nimage: "${image.url}"\nimageAlt: "${imageAlt}"\ntalkDetails: "${talkDetails}"\ntalkSummary: "${talkSummary}"\npermalink: "speakers/${slug}/index.html"\n---\n`
 
 				try {
 					// const filename = `${slug}.md`
@@ -41,7 +52,7 @@ const speakers = async () => {
 const init = async () => {
 	await speakers()
 
-	let watcher = spawn('npm', ['run', 'build'])
+	let watcher = spawn('npm', ['run', 'start'])
 
 	watcher.stdout.on('data', (data) => {
 		console.log(`${data}`)
@@ -56,7 +67,7 @@ const init = async () => {
 
 		watcher.kill()
 
-		watcher = spawn('npm', ['run', 'build'])
+		watcher = spawn('npm', ['run', 'start'])
 
 		watcher.stdout.on('data', (data) => {
 			console.log(`${data}`)
