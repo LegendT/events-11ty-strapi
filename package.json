@@ -7,7 +7,8 @@
 		"data": "concurrently \"rimraf dist\" \"node 11ty.js\" ",
 		"build": "eleventy --quiet",
 		"start": "npx gulp && concurrently \"npx gulp watch\" \"npx eleventy --serve\"",
-		"production": "NODE_ENV=production npx gulp && NODE_ENV=production npx eleventy"
+		"production": "NODE_ENV=production npx gulp && NODE_ENV=production npx eleventy",
+		"vue": "ELEVENTY_EXPERIMENTAL=true npx @11ty/eleventy --serve"
 	},
 	"keywords": [],
 	"author": "Anthony George",
@@ -16,6 +17,7 @@
 		"@11ty/eleventy": "^0.12.1",
 		"@11ty/eleventy-cache-assets": "^2.2.1",
 		"@11ty/eleventy-plugin-rss": "^1.1.1",
+		"@11ty/eleventy-plugin-vue": "^0.3.1",
 		"axios": "^0.21.1",
 		"child_process": "^1.0.2",
 		"concurrently": "^6.1.0",

@@ -34,7 +34,7 @@ const speakers = async () => {
 					talkDetails,
 					talkSummary,
 				} = speaker
-				const content = `--- \ntitle: "${title}"\njob: "${job}"\nabout: "${about}"\ntalkTimeStart: "${talkTimeStart}"\ntalkTimeEnd: "${talkTimeEnd}"\nimage: "${image.url}"\nimageAlt: "${imageAlt}"\ntalkDetails: "${talkDetails}"\ntalkSummary: "${talkSummary}"\npermalink: "speakers/${slug}/index.html"\n---\n`
+				const content = `--- \ntitle: "${title}"\njob: "${job}"\nabout: "${about}"\ntalkTimeStart: "${talkTimeStart}"\ntalkTimeEnd: "${talkTimeEnd}"\nimage: "${image.url}"\nimageAlt: "${imageAlt}"\ntalkDetails: "${talkDetails}"\ntalkSummary: "${talkSummary}"\npermalink: "speakers/${slug}/index.html"\ntemplateEngineOverride: njk,md\n---\n`
 
 				try {
 					// const filename = `${slug}.md`

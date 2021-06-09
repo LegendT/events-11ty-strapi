@@ -11,7 +11,7 @@
 
             <figcaption class="leading-loose flow-space-700">
                 {% if about %}
-                    {{ about | safe }}
+                    {{ about | markdownFilter | safe }}
                 {%endif%}
             </figcaption>
         </figure>
@@ -22,7 +22,7 @@
             <div class="leading-flat flow flow-space-700">
                 {% if talkDetails %}
                     <p>{{ talkDetails | safe }}</p>
-                    {%endif%}
+                {%endif%}
             </div>
         </div>
     </div>

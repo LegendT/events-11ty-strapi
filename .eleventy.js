@@ -5,14 +5,18 @@ module.exports = (config) => {
 	const dateFilter = require('./src/filters/date-filter.js')
 	const w3DateFilter = require('./src/filters/w3-date-filter.js')
 	const rssPlugin = require('@11ty/eleventy-plugin-rss')
-
+	const eleventyVue = require('@11ty/eleventy-plugin-vue')
+	const markdownFilter = require('./src/filters/markdown-filter.js')
 	// Add filters
 	config.addFilter('dateFilter', dateFilter)
 	config.addFilter('w3DateFilter', w3DateFilter)
 
+	config.addFilter('markdownFilter', markdownFilter)
+
 	// Plugins
 	config.addPlugin(rssPlugin)
 	config.addPlugin(ErrorOverlay)
+	config.addPlugin(eleventyVue)
 
 	// Transforms
 	const htmlMinTransform = require('./src/transforms/html-min-transform.js')
@@ -35,7 +39,6 @@ module.exports = (config) => {
 	})
 	// Tell 11ty to use the .eleventyignore and ignore our .gitignore file
 	config.setUseGitIgnore(false)
-
 
 	return {
 		markdownTemplateEngine: 'njk',
